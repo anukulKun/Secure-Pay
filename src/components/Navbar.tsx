@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="relative group">
             <motion.div
-              className="absolute -inset-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg blur-lg group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+              className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-lg blur-lg group-hover:opacity-100 opacity-0 transition-opacity duration-300"
               animate={{
                 scale: [1, 1.1, 1],
                 opacity: [0, 0.5, 0],
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               }}
             />
             <motion.span
-              className="relative text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text"
+              className="relative text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
                 <motion.div
                   className={`relative px-3 py-2 rounded-xl group ${
                     pathname === item.href 
-                      ? 'text-green-400' 
+                      ? 'text-blue-400' 
                       : 'text-gray-400 hover:text-white'
                   }`}
                   whileHover={{ scale: 1.05 }}
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
                 >
                   {pathname === item.href && (
                     <motion.div
-                      className="absolute inset-0 bg-green-500/10 rounded-xl"
+                      className="absolute inset-0 bg-blue-500/10 rounded-xl"
                       layoutId="navbar-active"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
                 <motion.div
                   className={`relative px-3 py-2 rounded-xl group ${
                     pathname === '/profile'
-                      ? 'text-green-400'
+                      ? 'text-blue-400'
                       : 'text-gray-400 hover:text-white'
                   }`}
                   whileHover={{ scale: 1.05 }}
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
                 >
                   {pathname === '/profile' && (
                     <motion.div
-                      className="absolute inset-0 bg-green-500/10 rounded-xl"
+                      className="absolute inset-0 bg-blue-500/10 rounded-xl"
                       layoutId="navbar-active"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
               <WalletIcon className="w-5 h-5 relative text-black" />
               <span className="relative text-black">
                 {address 
@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden relative p-2 rounded-xl bg-black/20 backdrop-blur-sm border border-green-500/20"
+            className="md:hidden relative p-2 rounded-xl bg-black/20 backdrop-blur-sm border border-blue-500/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -194,14 +194,14 @@ const Navbar: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <div className="bg-black/80 backdrop-blur-xl rounded-2xl border border-green-500/20 p-4 space-y-2">
+              <div className="bg-black/80 backdrop-blur-xl rounded-2xl border border-blue-500/20 p-4 space-y-2">
                 {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
                     <motion.div
                       className={`flex items-center space-x-2 px-4 py-3 rounded-xl transition-colors ${
                         pathname === item.href
-                          ? 'bg-green-500/20 text-green-400'
-                          : 'text-gray-400 hover:bg-green-500/10 hover:text-white'
+                          ? 'bg-blue-500/20 text-blue-400'
+                          : 'text-gray-400 hover:bg-blue-500/10 hover:text-white'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                       whileHover={{ x: 4 }}
@@ -218,8 +218,8 @@ const Navbar: React.FC = () => {
                     <motion.div
                       className={`flex items-center space-x-2 px-4 py-3 rounded-xl transition-colors ${
                         pathname === '/profile'
-                          ? 'bg-green-500/20 text-green-400'
-                          : 'text-gray-400 hover:bg-green-500/10 hover:text-white'
+                          ? 'bg-blue-500/20 text-blue-400'
+                          : 'text-gray-400 hover:bg-blue-500/10 hover:text-white'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                       whileHover={{ x: 4 }}
@@ -242,7 +242,7 @@ const Navbar: React.FC = () => {
                     handleWalletClick()
                     setIsMenuOpen(false)
                   }}
-                  className="w-full flex items-center space-x-2 px-4 py-3 rounded-xl font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-black"
+                  className="w-full flex items-center space-x-2 px-4 py-3 rounded-xl font-medium bg-gradient-to-r from-blue-500 to-emerald-500 text-black"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

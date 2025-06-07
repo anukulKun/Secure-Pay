@@ -122,7 +122,7 @@ const statusLabels: { [key: number]: string } = {
 };
 
 const statusColors: { [key: number]: string } = {
-  0: 'bg-yellow-500/20 text-yellow-500',
+  0: 'bg-blue-500/20 text-blue-500',
   1: 'bg-green-500/20 text-green-500',
   2: 'bg-red-500/20 text-red-500',
 };
@@ -320,8 +320,8 @@ export default function ProfilePage() {
         relative px-4 py-2 rounded-xl font-medium flex items-center space-x-2
         transition-all duration-300
         ${active 
-          ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-black' 
-          : 'bg-black/40 backdrop-blur-xl border border-green-500/20 text-gray-400 hover:text-white'
+          ? 'bg-gradient-to-r from-blue-500 to-emerald-500 text-black' 
+          : 'bg-black/40 backdrop-blur-xl border border-blue-500/20 text-gray-400 hover:text-white'
         }
       `}
       whileHover={{ scale: 1.05 }}
@@ -332,14 +332,14 @@ export default function ProfilePage() {
       {count !== undefined && count > 0 && (
         <span className={`
           px-2 py-0.5 rounded-full text-sm
-          ${active ? 'bg-black/20' : 'bg-green-500/20'}
+          ${active ? 'bg-black/20' : 'bg-blue-500/20'}
         `}>
           {count}
         </span>
       )}
       {active && (
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl blur-lg -z-10"
+          className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl blur-lg -z-10"
           layoutId="activeTabIndicator"
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
         />
@@ -362,14 +362,14 @@ export default function ProfilePage() {
       whileHover="hover"
       onClick={onClick}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="relative bg-black/40 backdrop-blur-xl p-6 rounded-xl border border-green-500/20 group-hover:border-green-500/40 transition-all duration-300 h-full">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative bg-black/40 backdrop-blur-xl p-6 rounded-xl border border-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300 h-full">
         <div className="flex justify-between items-start mb-4">
-          <div className="text-green-400 p-2 bg-green-500/10 rounded-lg">
+          <div className="text-blue-400 p-2 bg-blue-500/10 rounded-lg">
             {icon}
           </div>
           {percentage !== undefined && (
-            <div className={`text-sm ${percentage >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+            <div className={`text-sm ${percentage >= 0 ? 'text-blue-400' : 'text-red-400'}`}>
               {percentage > 0 ? '+' : ''}{percentage}%
             </div>
           )}
@@ -393,12 +393,12 @@ export default function ProfilePage() {
       className="text-center py-12"
       variants={fadeIn}
     >
-      <div className="text-green-400/40 mb-4 flex justify-center">{icon}</div>
+      <div className="text-blue-400/40 mb-4 flex justify-center">{icon}</div>
       <p className="text-gray-400 mb-4">{message}</p>
       {actionLabel && onAction && (
         <motion.button
           onClick={onAction}
-          className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/10 rounded-lg text-green-400 hover:bg-green-500/20 transition-colors"
+          className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/10 rounded-lg text-blue-400 hover:bg-blue-500/20 transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -431,25 +431,25 @@ export default function ProfilePage() {
         initial="initial"
         whileHover="hover"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-green-500/10 group-hover:border-green-500/20 transition-colors duration-300">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-blue-500/10 group-hover:border-blue-500/20 transition-colors duration-300">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center space-x-3">
-              <div className={`p-2 rounded-full ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'bg-red-500/10' : 'bg-green-500/10'}`}>
-                <DirectionIcon className={`w-5 h-5 ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'text-red-400' : 'text-green-400'}`} />
+              <div className={`p-2 rounded-full ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'bg-red-500/10' : 'bg-blue-500/10'}`}>
+                <DirectionIcon className={`w-5 h-5 ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'text-red-400' : 'text-blue-400'}`} />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">
                   {transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'Sent to:' : 'Received from:'}
                 </p>
-                <p className="text-green-400">
+                <p className="text-blue-400">
                   {transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? truncateAddress(transfer.recipient) : truncateAddress(transfer.sender)}
                 </p>
               </div>
             </div>
             <div className="text-right">
               <p className="text-sm text-gray-400">Amount</p>
-              <p className={`font-semibold ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'text-red-400' : 'text-green-400'}`}>
+              <p className={`font-semibold ${transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? 'text-red-400' : 'text-blue-400'}`}>
                 {transfer.sender.toLowerCase() === userAddress?.toLowerCase() ? '-' : '+'}{transfer.amount} {currentChain.symbol}
               </p>
             </div>
@@ -488,8 +488,8 @@ export default function ProfilePage() {
         initial="initial"
         whileHover="hover"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-green-500/10 group-hover:border-green-500/20 transition-colors duration-300">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-blue-500/10 group-hover:border-blue-500/20 transition-colors duration-300">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center space-x-3">
               <div className="p-2 rounded-full bg-blue-500/10">
@@ -558,8 +558,8 @@ export default function ProfilePage() {
         initial="initial"
         whileHover="hover"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-green-500/10 group-hover:border-green-500/20 transition-colors duration-300">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-blue-500/10 group-hover:border-blue-500/20 transition-colors duration-300">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center space-x-3">
               <div className="p-2 rounded-full bg-purple-500/10">
@@ -605,7 +605,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-green-950">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-blue-950">
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
       <motion.div 
         className="container mx-auto px-4 py-16 md:py-20 relative z-10"
@@ -619,8 +619,8 @@ export default function ProfilePage() {
             initial="initial"
             animate="animate"
           >
-            <div className="bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-green-500/10">
-              <UserCircleIcon className="w-16 h-16 text-green-400" />
+            <div className="bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-blue-500/10">
+              <UserCircleIcon className="w-16 h-16 text-blue-400" />
             </div>
           </motion.div>
 
@@ -628,7 +628,7 @@ export default function ProfilePage() {
             {registeredUsername ? (
               <div className="flex flex-col items-center space-y-2">
                 <h1 className="text-4xl md:text-5xl font-bold">
-                  <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text">
                     @{registeredUsername}
                   </span>
                 </h1>
@@ -636,10 +636,10 @@ export default function ProfilePage() {
                   <span>{truncateAddress(address)}</span>
                   <button 
                     onClick={copyAddressToClipboard}
-                    className="hover:text-green-400 transition-colors"
+                    className="hover:text-blue-400 transition-colors"
                   >
                     {copiedAddress ? 
-                      <CheckCircleIcon className="w-4 h-4 text-green-500" /> : 
+                      <CheckCircleIcon className="w-4 h-4 text-blue-500" /> : 
                       <DocumentDuplicateIcon className="w-4 h-4" />
                     }
                   </button>
@@ -648,7 +648,7 @@ export default function ProfilePage() {
             ) : (
               <div className="flex flex-col items-center space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold">
-                  <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text">
                     My Profile
                   </span>
                 </h1>
@@ -656,17 +656,17 @@ export default function ProfilePage() {
                   <span>{truncateAddress(address)}</span>
                   <button 
                     onClick={copyAddressToClipboard}
-                    className="hover:text-green-400 transition-colors"
+                    className="hover:text-blue-400 transition-colors"
                   >
                     {copiedAddress ? 
-                      <CheckCircleIcon className="w-4 h-4 text-green-500" /> : 
+                      <CheckCircleIcon className="w-4 h-4 text-blue-500" /> : 
                       <DocumentDuplicateIcon className="w-4 h-4" />
                     }
                   </button>
                 </div>
                 <motion.button
                   onClick={() => setShowUsernameModal(true)}
-                  className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/10 rounded-lg text-green-400 hover:bg-green-500/20 transition-colors"
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/10 rounded-lg text-blue-400 hover:bg-blue-500/20 transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -679,7 +679,7 @@ export default function ProfilePage() {
             <div className="flex items-center justify-center space-x-4 mt-4">
               <motion.button
                 onClick={() => setShowQR(true)}
-                className="p-2 bg-black/30 backdrop-blur-xl rounded-xl border border-green-500/10 text-green-400 hover:bg-green-500/20 transition-all duration-300"
+                className="p-2 bg-black/30 backdrop-blur-xl rounded-xl border border-blue-500/10 text-blue-400 hover:bg-blue-500/20 transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 title="Show Payment QR"
@@ -688,7 +688,7 @@ export default function ProfilePage() {
               </motion.button>
               <motion.button
                 onClick={fetchUserData}
-                className="p-2 bg-black/30 backdrop-blur-xl rounded-xl border border-green-500/10 text-green-400 hover:bg-green-500/20 transition-all duration-300"
+                className="p-2 bg-black/30 backdrop-blur-xl rounded-xl border border-blue-500/10 text-blue-400 hover:bg-blue-500/20 transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 title="Refresh Data"
@@ -730,12 +730,12 @@ export default function ProfilePage() {
         {/* Activity History Section */}
         <motion.div variants={pageTransition} className="max-w-6xl mx-auto">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
-            <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-green-500/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
+            <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-blue-500/20">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 space-y-4 md:space-y-0">
                 <h2 className="text-2xl font-semibold flex items-center space-x-2">
-                  <ClockIcon className="w-6 h-6 text-green-400" />
-                  <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+                  <ClockIcon className="w-6 h-6 text-blue-400" />
+                  <span className="bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text">
                     Activity History
                   </span>
                 </h2>
@@ -773,7 +773,7 @@ export default function ProfilePage() {
                     exit={{ opacity: 0 }}
                     className="flex justify-center items-center py-20"
                   >
-                    <ArrowPathIcon className="w-10 h-10 text-green-400 animate-spin" />
+                    <ArrowPathIcon className="w-10 h-10 text-blue-400 animate-spin" />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -880,13 +880,13 @@ export default function ProfilePage() {
               animate="visible"
               exit="exit"
             >
-              <div className="relative bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-2xl border border-green-500/20 overflow-hidden backdrop-blur-xl shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 to-emerald-500/5 rounded-2xl blur-xl" />
+              <div className="relative bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-2xl border border-blue-500/20 overflow-hidden backdrop-blur-xl shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-emerald-500/5 rounded-2xl blur-xl" />
                 <div className="relative p-6">
                   <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-semibold flex items-center space-x-2">
-                      <UserCircleIcon className="w-6 h-6 text-green-400" />
-                      <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+                      <UserCircleIcon className="w-6 h-6 text-blue-400" />
+                      <span className="bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text">
                         Register Username
                       </span>
                     </h2>
@@ -900,7 +900,7 @@ export default function ProfilePage() {
 
                   <div className="bg-black/20 p-4 rounded-xl mb-6">
                     <div className="flex items-start space-x-3">
-                      <InformationCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <InformationCircleIcon className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                       <p className="text-gray-400 text-sm">
                         Choose a unique username to make it easier for others to send you funds.
                         This cannot be changed later.
@@ -910,14 +910,14 @@ export default function ProfilePage() {
 
                   <form onSubmit={handleRegisterUsername} className="space-y-6">
                     <div>
-                      <label className="block text-sm font-medium text-green-400 mb-2">
+                      <label className="block text-sm font-medium text-blue-400 mb-2">
                         Username
                       </label>
                       <input
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all duration-200"
                         placeholder="Enter desired username"
                         required
                         minLength={3}
@@ -956,7 +956,7 @@ export default function ProfilePage() {
 
                     <motion.button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
+                      className="w-full bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={isLoading || !signer}
@@ -1000,8 +1000,8 @@ export default function ProfilePage() {
                 exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="relative bg-gradient-to-b from-gray-800/30 to-gray-900/30 rounded-3xl border border-green-500/20 overflow-hidden backdrop-blur-xl shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-b from-green-500/10 to-emerald-500/10 rounded-3xl blur-xl" />
+                <div className="relative bg-gradient-to-b from-gray-800/30 to-gray-900/30 rounded-3xl border border-blue-500/20 overflow-hidden backdrop-blur-xl shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-emerald-500/10 rounded-3xl blur-xl" />
                   <div className="relative p-6 md:p-8">
                     <button
                       onClick={() => setShowQR(false)}

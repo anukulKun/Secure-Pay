@@ -311,7 +311,7 @@ export default function SavingsPotsPage() {
 
       {success && (
         <motion.div 
-          className="bg-green-500/10 border border-green-500/50 text-green-700 dark:text-green-300 p-4 rounded-xl mb-6 flex items-start"
+          className="bg-blue-500/10 border border-blue-500/50 text-blue-700 dark:text-blue-300 p-4 rounded-xl mb-6 flex items-start"
           variants={fadeIn}
           initial="initial"
           animate="animate"

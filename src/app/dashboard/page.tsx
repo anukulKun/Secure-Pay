@@ -237,7 +237,7 @@ export default function DashboardPage() {
           <div className={`p-2 rounded-full ${
             activity.type === 'sent' 
               ? 'bg-orange-500/20 text-orange-400'
-              : 'bg-green-500/20 text-green-400'
+              : 'bg-blue-500/20 text-blue-400'
           }`}>
             {activity.type === 'sent' ? (
               <ArrowRightIcon className="w-5 h-5" />
@@ -255,7 +255,7 @@ export default function DashboardPage() {
               <span>{formatDate(activity.timestamp)}</span>
               <span className={`px-2 py-0.5 rounded-full text-xs ${
                 activity.status === 0 ? 'bg-yellow-500/20 text-yellow-400' :
-                activity.status === 1 ? 'bg-green-500/20 text-green-400' :
+                activity.status === 1 ? 'bg-blue-500/20 text-blue-400' :
                 'bg-red-500/20 text-red-400'
               }`}>
                 {getStatusText(activity.status)}
@@ -354,7 +354,7 @@ export default function DashboardPage() {
                   description="Send assets securely to any address or username"
                   icon={<ArrowRightIcon className="w-6 h-6 text-[rgb(var(--foreground))]" />}
                   href="/transfer"
-                  gradientFrom="from-green-500/20"
+                  gradientFrom="from-blue-500/20"
                   gradientTo="to-emerald-500/20"
                 />
               </motion.div>

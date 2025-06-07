@@ -39,7 +39,7 @@ const ConnectWallet = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
                     <span className="relative text-black">Connect Wallet</span>
                   </motion.button>
                 );
@@ -65,7 +65,7 @@ const ConnectWallet = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
                   <span className="relative text-black">
                     {account.displayName}
                   </span>

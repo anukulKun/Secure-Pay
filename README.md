@@ -1,7 +1,6 @@
 # SecurePay
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/eb3dbd55-6522-4d3b-b6f9-6ec63157e565" alt="SecurePay Logo" width="650px">
   
   <h3>Smart. Secure Crypto Transfers</h3>
   
@@ -23,7 +22,6 @@
 
 ### 🛡️ Secure Cross-Chain Transfers
 
-<img align="right" src="https://github.com/user-attachments/assets/bdb20bd8-fa93-488a-b720-46615b9918de" width="350px">
 
 - **Escrow-Like Protection**: Funds remain secure until claimed by recipient
 - **Multi-Chain Support**: Send assets seamlessly across different blockchains
@@ -37,7 +35,6 @@
 
 ### 👥 Group Payments
 
-<img align="right" src="https://github.com/user-attachments/assets/56141ff7-ad4b-4a1e-bfac-5abdd92b22a9" width="350px">
 
 - **Split Expenses Easily**: Divide costs among friends or colleagues
 - **Cross-Chain Contributors**: Accept payments from any supported blockchain
@@ -50,7 +47,6 @@
 
 ### 💰 Savings Pots
 
-<img align="right" src="https://github.com/user-attachments/assets/4c88cdb7-d21c-4d1e-863f-53d063830e19" width="350px">
 
 - **Goal-Based Savings**: Set targets and track progress visually
 - **Chain-Specific Pots**: Create dedicated savings on each blockchain
@@ -64,7 +60,6 @@
 
 ### 🔄 Cross-Chain User Experience
 
-<img align="right" src="https://github.com/user-attachments/assets/35cbdaad-5e05-4dc6-9a13-18b2f0b4a919" width="350px">
 
 - **Universal Username**: One identity across all supported chains
 - **Unified Dashboard**: View all activities in a single interface
@@ -77,7 +72,6 @@
 
 ### 📱 QR Code System
 
-<img align="right" src="https://github.com/user-attachments/assets/bc4e425b-d6f7-49b8-a4fe-8831ba9e5548" width="200px">
 
 - **Profile QR Codes**: Generate codes containing payment details
 - **In-App Scanner**: Scan QR codes via camera or image uploads
@@ -86,9 +80,6 @@
 - **Share Anywhere**: Easy to share via messenger or print
 - **Instant Recognition**: Fast processing of payment information
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/f645759e-47bf-4fb1-9e87-b46f7c0bc6a7" width="400px">
-</div>
 
 <br clear="right"/>
 
@@ -139,7 +130,6 @@ SecurePay operates seamlessly across multiple blockchains, delivering consistent
 ## 💻 User Interface
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/c87a5393-76dd-4cde-9895-80481511cc2c" width="700px">
   <p><i>Modern, intuitive interface with glassmorphism design</i></p>
 </div>
 
@@ -153,7 +143,6 @@ SecurePay operates seamlessly across multiple blockchains, delivering consistent
 ### Dashboard Experience
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/21ce5262-c766-4a5a-bc5a-4b10f776188b" width="700px">
   <p><i>Comprehensive dashboard with multi-chain activity tracking</i></p>
 </div>
 
@@ -240,25 +229,7 @@ SecurePay prioritizes security at every level:
   </table>
 </div>
 
-## 🎬 Demo
 
-See SecurePay in action:
-
-<div align="center">
-  <a href="https://youtu.be/TJgnpVpa51c?si=ojjzXsVgQBj_BSGN">
-    <img src="https://img.youtube.com/vi/TJgnpVpa51c/0.jpg" alt="SecurePay Demo Video" width="500px">
-  </a>
-  <p><b>Click to watch the demo video</b></p>
-</div>
-
-## 📞 Support
-
-Need assistance or have questions? We're here to help:
-
-- **Email**: [protectedpay.business@gmail.com](mailto:protectedpay.business@gmail.com)
-- **Report Issues**: [GitHub Issues](https://github.com/username/protectedpay/issues)
-
----
 
 <div align="center">
   <p>© 2025 SecurePay</p>

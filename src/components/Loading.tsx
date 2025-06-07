@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-[200px]">
     <motion.div
-      className="h-12 w-12 border-4 border-green-500 border-t-transparent rounded-full"
+      className="h-12 w-12 border-4 border-blue-500 border-t-transparent rounded-full"
       animate={{ rotate: 360 }}
       transition={{
         duration: 1,
@@ -29,7 +29,7 @@ export const LoadingPage = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-green-400 mt-4"
+        className="text-blue-400 mt-4"
       >
         Loading...
       </motion.p>
@@ -50,7 +50,7 @@ export const LoadingOverlay = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-green-400 mt-4"
+        className="text-blue-400 mt-4"
       >
         Processing...
       </motion.p>

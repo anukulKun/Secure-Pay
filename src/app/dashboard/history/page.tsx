@@ -257,7 +257,7 @@ export default function HistoryPage() {
     if (status === 0) {
       return 'bg-yellow-500/20 text-yellow-500 dark:text-yellow-400'
     } else if (status === 1) {
-      return 'bg-green-500/20 text-green-500 dark:text-green-400'
+      return 'bg-blue-500/20 text-blue-500 dark:text-blue-400'
     } else if (status === 2) {
       if (type === 'savings_pot') { // Broken pot
         return 'bg-orange-500/20 text-orange-500 dark:text-orange-400'
@@ -291,7 +291,7 @@ export default function HistoryPage() {
       if (transaction.subtype === 'sent') {
         return 'bg-blue-500/20 text-blue-500 dark:text-blue-400'
       } else {
-        return 'bg-green-500/20 text-green-500 dark:text-green-400'
+        return 'bg-blue-500/20 text-blue-500 dark:text-blue-400'
       }
     } else if (transaction.type === 'group_payment') {
       return 'bg-purple-500/20 text-purple-500 dark:text-purple-400'

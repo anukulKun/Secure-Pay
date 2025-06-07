@@ -15,8 +15,8 @@ const QRContainer: React.FC<QRContainerProps> = ({
   onDownload 
 }) => {
   return (
-    <div className="relative p-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg">
-      <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 blur-lg" />
+    <div className="relative p-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-lg">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 blur-lg" />
       
       <div className="relative bg-black/90 p-4 rounded-lg">
       {children}
@@ -26,7 +26,7 @@ const QRContainer: React.FC<QRContainerProps> = ({
         {onShare && (
         <motion.button
           onClick={onShare}
-          className="p-2 bg-black/80 rounded-xl border border-green-500/20 text-green-400 hover:bg-green-500/20 transition-colors"
+          className="p-2 bg-black/80 rounded-xl border border-blue-500/20 text-blue-400 hover:bg-blue-500/20 transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -37,7 +37,7 @@ const QRContainer: React.FC<QRContainerProps> = ({
         {onDownload && (
         <motion.button
           onClick={onDownload}
-          className="p-2 bg-black/80 rounded-xl border border-green-500/20 text-green-400 hover:bg-green-500/20 transition-colors"
+          className="p-2 bg-black/80 rounded-xl border border-blue-500/20 text-blue-400 hover:bg-blue-500/20 transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

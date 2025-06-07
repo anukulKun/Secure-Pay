@@ -539,7 +539,7 @@ export default function TransferPage() {
                     className="space-y-6"
                   >
                     <div>
-                      <label className="mb-2 text-green-400 font-medium flex items-center">
+                      <label className="mb-2 text-blue-400 font-medium flex items-center">
                         <CurrencyDollarIcon className="w-5 h-5 mr-2" />
                         Amount ({currentChain.symbol})
                       </label>
@@ -547,14 +547,14 @@ export default function TransferPage() {
                         type="number"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
                         placeholder="0.0"
                         required
                         min="0"
                         step="0.000000000000000001"
                       />
                       {amount && parseFloat(amount) > 0 && (
-                        <p className="mt-2 text-xs text-green-400 flex justify-end">
+                        <p className="mt-2 text-xs text-blue-400 flex justify-end">
                           ≈ {formatAmount(amount)} {currentChain.symbol}
                         </p>
                       )}
@@ -576,7 +576,7 @@ export default function TransferPage() {
                         type="button"
                         onClick={() => amount && parseFloat(amount) > 0 ? setFormStep(3) : null}
                         disabled={!amount || parseFloat(amount) <= 0}
-                        className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-medium flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-medium flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed"
                         whileHover={amount && parseFloat(amount) > 0 ? { scale: 1.02 } : undefined}
                         whileTap={amount && parseFloat(amount) > 0 ? { scale: 0.98 } : undefined}
                       >
@@ -597,14 +597,14 @@ export default function TransferPage() {
                     className="space-y-6"
                   >
                     <div>
-                      <label className="mb-2 text-green-400 font-medium flex items-center">
+                      <label className="mb-2 text-blue-400 font-medium flex items-center">
                         <ChatBubbleBottomCenterTextIcon className="w-5 h-5 mr-2" />
                         Message
                       </label>
                       <textarea
                         value={remarks}
                         onChange={(e) => setRemarks(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
                         placeholder="Add a note about this transfer"
                         required
                         rows={3}
@@ -630,7 +630,7 @@ export default function TransferPage() {
                       <motion.button
                         type="submit"
                         disabled={!remarks}
-                        className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-medium flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-medium flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed"
                         whileHover={remarks ? { scale: 1.02 } : undefined}
                         whileTap={remarks ? { scale: 0.98 } : undefined}
                       >
@@ -656,7 +656,7 @@ export default function TransferPage() {
       }} className="space-y-6">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-green-400 font-medium flex items-center">
+            <label className="text-blue-400 font-medium flex items-center">
               <UserCircleIcon className="w-5 h-5 mr-2" />
               Sender Identifier
             </label>
@@ -666,7 +666,7 @@ export default function TransferPage() {
             type="text"
             value={transferId}
             onChange={(e) => setTransferId(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+            className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
             placeholder="Address, username, or transfer ID"
             required
           />
@@ -676,16 +676,16 @@ export default function TransferPage() {
           </p>
         </div>
 
-        <div className="bg-green-500/5 p-4 rounded-xl border border-green-500/20">
+        <div className="bg-blue-500/5 p-4 rounded-xl border border-blue-500/20">
           <p className="text-gray-300 text-sm flex items-start">
-            <CheckCircleIcon className="w-5 h-5 mr-2 flex-shrink-0 text-green-400" />
+            <CheckCircleIcon className="w-5 h-5 mr-2 flex-shrink-0 text-blue-400" />
             When you claim, funds will be immediately transferred to your wallet
           </p>
         </div>
 
         <motion.button
           type="submit"
-          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50"
+          className="w-full bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           disabled={isLoading || !signer || !transferId}
@@ -718,7 +718,7 @@ export default function TransferPage() {
       }} className="space-y-6">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-green-400 font-medium flex items-center">
+            <label className="text-blue-400 font-medium flex items-center">
               <DocumentDuplicateIcon className="w-5 h-5 mr-2" />
               Transfer ID
             </label>
@@ -728,7 +728,7 @@ export default function TransferPage() {
             type="text"
             value={transferId}
             onChange={(e) => setTransferId(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40"
+            className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
             placeholder="0x... (transfer ID)"
             required
           />
@@ -747,7 +747,7 @@ export default function TransferPage() {
 
         <motion.button
           type="submit"
-          className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50"
+          className="w-full bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           disabled={isLoading || !signer || !transferId}
@@ -802,7 +802,7 @@ export default function TransferPage() {
     if (isLoading && !transfers.length) {
       return (
         <div className="text-center py-8 flex flex-col items-center justify-center">
-          <ArrowPathIcon className="w-8 h-8 text-green-400 animate-spin mb-4" />
+          <ArrowPathIcon className="w-8 h-8 text-blue-400 animate-spin mb-4" />
           <p className="text-gray-400">Loading transfers...</p>
         </div>
       );
@@ -813,18 +813,18 @@ export default function TransferPage() {
         <div className="text-center py-8 text-gray-400 flex flex-col items-center">
           <div className="bg-black/30 p-4 rounded-full mb-4">
             {activeTab === TransferTabs.CLAIM ? (
-              <ArrowDownIcon className="w-10 h-10 text-green-400 opacity-50" />
+              <ArrowDownIcon className="w-10 h-10 text-blue-400 opacity-50" />
             ) : activeTab === TransferTabs.REFUND ? (
-              <ArrowLeftIcon className="w-10 h-10 text-green-400 opacity-50" />
+              <ArrowLeftIcon className="w-10 h-10 text-blue-400 opacity-50" />
             ) : (
-              <ArrowRightIcon className="w-10 h-10 text-green-400 opacity-50" />
+              <ArrowRightIcon className="w-10 h-10 text-blue-400 opacity-50" />
             )}
           </div>
           <p>No pending transfers found</p>
           {activeTab === TransferTabs.SEND && (
             <button 
               onClick={() => setFormStep(1)}
-              className="mt-4 text-green-400 hover:text-green-300 text-sm underline flex items-center"
+              className="mt-4 text-blue-400 hover:text-blue-300 text-sm underline flex items-center"
             >
               <ArrowRightIcon className="w-4 h-4 mr-1" />
               Send your first transfer
@@ -847,8 +847,8 @@ export default function TransferPage() {
             className="relative group"
             variants={slideIn}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-green-500/10 group-hover:border-green-500/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-emerald-500/5 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative bg-black/30 backdrop-blur-xl p-4 rounded-xl border border-blue-500/10 group-hover:border-blue-500/20">
               <div className="flex justify-between items-start mb-3">
                 <div>
                   <div className="text-sm text-gray-400 mb-1">
@@ -857,7 +857,7 @@ export default function TransferPage() {
                       `From: ${truncateText(transfer.sender)}` : 
                       `To: ${truncateText(transfer.recipient)}`}
                   </div>
-                  <div className="text-green-400 font-semibold">{formatAmount(transfer.amount)} {currentChain.symbol}</div>
+                  <div className="text-blue-400 font-semibold">{formatAmount(transfer.amount)} {currentChain.symbol}</div>
                 </div>
                 <motion.button
                   onClick={() => {
@@ -871,7 +871,7 @@ export default function TransferPage() {
                   className={`${
                     (activeTab === TransferTabs.CLAIM || 
                      (activeTab === TransferTabs.SEND && transfer.recipient.toLowerCase() === address?.toLowerCase()))
-                      ? 'bg-green-500/10 border-green-500/20 text-green-400 hover:bg-green-500/20'
+                      ? 'bg-blue-500/10 border-blue-500/20 text-blue-400 hover:bg-blue-500/20'
                       : 'bg-red-500/10 border-red-500/20 text-red-400 hover:bg-red-500/20'
                   } border px-3 py-1.5 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2`}
                   whileHover={{ scale: 1.05 }}
@@ -900,13 +900,13 @@ export default function TransferPage() {
                 </div>
                 <motion.button
                   onClick={() => copyToClipboard(transfer.id)}
-                  className="bg-black/30 p-1 rounded text-green-400 hover:text-green-300"
+                  className="bg-black/30 p-1 rounded text-blue-400 hover:text-blue-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   title="Copy Transfer ID"
                 >
                   {copiedId === transfer.id ? (
-                    <CheckCircleIcon className="w-4 h-4 text-green-500" />
+                    <CheckCircleIcon className="w-4 h-4 text-blue-500" />
                   ) : (
                     <DocumentDuplicateIcon className="w-4 h-4" />
                   )}
@@ -920,7 +920,7 @@ export default function TransferPage() {
                       setActiveTab(TransferTabs.CLAIM);
                     }
                   }}
-                  className="text-xs bg-green-500/10 px-2 py-0.5 rounded text-green-400 hover:bg-green-500/20"
+                  className="text-xs bg-blue-500/10 px-2 py-0.5 rounded text-blue-400 hover:bg-blue-500/20"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -974,7 +974,7 @@ export default function TransferPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-green-950 overflow-x-hidden">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-blue-950 overflow-x-hidden">
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none opacity-30" />
       
       <motion.div 
@@ -996,15 +996,15 @@ export default function TransferPage() {
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <div className="bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-green-500/10">
-              {activeTab === TransferTabs.SEND && <ArrowRightIcon className="w-16 h-16 text-green-400" />}
-              {activeTab === TransferTabs.CLAIM && <ArrowDownIcon className="w-16 h-16 text-green-400" />}
-              {activeTab === TransferTabs.REFUND && <ArrowLeftIcon className="w-16 h-16 text-green-400" />}
+            <div className="bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-blue-500/10">
+              {activeTab === TransferTabs.SEND && <ArrowRightIcon className="w-16 h-16 text-blue-400" />}
+              {activeTab === TransferTabs.CLAIM && <ArrowDownIcon className="w-16 h-16 text-blue-400" />}
+              {activeTab === TransferTabs.REFUND && <ArrowLeftIcon className="w-16 h-16 text-blue-400" />}
             </div>
           </motion.div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text">
               {getTabLabel()}
             </span>
           </h1>
@@ -1016,15 +1016,15 @@ export default function TransferPage() {
 
         {/* Tab Navigation */}
         <div className="max-w-4xl mx-auto mb-8 px-2">
-          <div className="flex rounded-xl overflow-hidden bg-black/30 backdrop-blur-xl border border-green-500/20 p-1">
+          <div className="flex rounded-xl overflow-hidden bg-black/30 backdrop-blur-xl border border-blue-500/20 p-1">
             {Object.values(TransferTabs).map((tab) => (
               <motion.button
                 key={tab}
                 onClick={() => handleTabChange(tab)}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
                   activeTab === tab 
-                    ? 'bg-green-500 text-black shadow-lg' 
-                    : 'text-green-400 hover:bg-green-500/10'
+                    ? 'bg-blue-500 text-black shadow-lg' 
+                    : 'text-blue-400 hover:bg-blue-500/10'
                 }`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -1044,9 +1044,9 @@ export default function TransferPage() {
               variants={pageTransition}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
-                <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-green-500/20">
-                  <h2 className="text-xl font-semibold text-green-400 mb-6 flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
+                <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-blue-500/20">
+                  <h2 className="text-xl font-semibold text-blue-400 mb-6 flex items-center">
                     {activeTab === TransferTabs.SEND && (
                       <>
                         <ArrowRightIcon className="w-5 h-5 mr-2" />
@@ -1078,10 +1078,10 @@ export default function TransferPage() {
               variants={pageTransition}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
-                <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-green-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl" />
+                <div className="relative bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-blue-500/20">
                   <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl font-semibold text-green-400 flex items-center">
+                    <h2 className="text-xl font-semibold text-blue-400 flex items-center">
                       <ClockIcon className="w-5 h-5 mr-2" />
                       <span>
                         {activeTab === TransferTabs.SEND ? 'Recent Transfers' :
@@ -1093,7 +1093,7 @@ export default function TransferPage() {
                     <div className="flex space-x-2">
                       <motion.button
                         onClick={fetchPendingTransfers}
-                        className="bg-black/30 p-2 rounded-lg text-green-400 hover:text-green-300"
+                        className="bg-black/30 p-2 rounded-lg text-blue-400 hover:text-blue-300"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         title="Refresh"
@@ -1103,7 +1103,7 @@ export default function TransferPage() {
                       
                       <motion.button
                         onClick={() => setShowTransactions(!showTransactions)}
-                        className="bg-black/30 p-2 rounded-lg text-green-400 hover:text-green-300 md:hidden"
+                        className="bg-black/30 p-2 rounded-lg text-blue-400 hover:text-blue-300 md:hidden"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         title={showTransactions ? "Hide Transactions" : "Show Transactions"}
@@ -1137,48 +1137,48 @@ export default function TransferPage() {
           {/* Feature Callouts - Desktop: horizontal, Mobile: vertical */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8">
             <motion.div 
-              className="bg-black/30 backdrop-blur-sm border border-green-500/10 rounded-xl p-4 hover:border-green-500/20"
+              className="bg-black/30 backdrop-blur-sm border border-blue-500/10 rounded-xl p-4 hover:border-blue-500/20"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center space-x-3">
-                <div className="bg-green-500/10 p-2 rounded-lg">
-                  <ShieldCheckIcon className="w-6 h-6 text-green-400" />
+                <div className="bg-blue-500/10 p-2 rounded-lg">
+                  <ShieldCheckIcon className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-green-400">Secure Transfers</h3>
+                  <h3 className="font-medium text-blue-400">Secure Transfers</h3>
                   <p className="text-sm text-gray-400">Funds are held in escrow until claimed</p>
                 </div>
               </div>
             </motion.div>
             
             <motion.div 
-              className="bg-black/30 backdrop-blur-sm border border-green-500/10 rounded-xl p-4 hover:border-green-500/20"
+              className="bg-black/30 backdrop-blur-sm border border-blue-500/10 rounded-xl p-4 hover:border-blue-500/20"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center space-x-3">
-                <div className="bg-green-500/10 p-2 rounded-lg">
-                  <UserCircleIcon className="w-6 h-6 text-green-400" />
+                <div className="bg-blue-500/10 p-2 rounded-lg">
+                  <UserCircleIcon className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-green-400">Username Support</h3>
+                  <h3 className="font-medium text-blue-400">Username Support</h3>
                   <p className="text-sm text-gray-400">Send to usernames instead of addresses</p>
                 </div>
               </div>
             </motion.div>
             
             <motion.div 
-              className="bg-black/30 backdrop-blur-sm border border-green-500/10 rounded-xl p-4 hover:border-green-500/20"
+              className="bg-black/30 backdrop-blur-sm border border-blue-500/10 rounded-xl p-4 hover:border-blue-500/20"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center space-x-3">
-                <div className="bg-green-500/10 p-2 rounded-lg">
-                  <QrCodeIcon className="w-6 h-6 text-green-400" />
+                <div className="bg-blue-500/10 p-2 rounded-lg">
+                  <QrCodeIcon className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-green-400">QR Scan & Share</h3>
+                  <h3 className="font-medium text-blue-400">QR Scan & Share</h3>
                   <p className="text-sm text-gray-400">Easily send and receive with QR codes</p>
                 </div>
               </div>
@@ -1198,7 +1198,7 @@ export default function TransferPage() {
                 <div
                   className={`p-4 rounded-xl backdrop-blur-xl border ${
                     success
-                      ? 'bg-green-500/10 border-green-500/20 text-green-400'
+                      ? 'bg-blue-500/10 border-blue-500/20 text-blue-400'
                       : 'bg-red-500/10 border-red-500/20 text-red-400'
                   }`}
                 >

@@ -8,7 +8,7 @@ export const STATUS_LABELS = {
   
   export const STATUS_COLORS = {
     0: 'bg-yellow-500/20 text-yellow-500',
-    1: 'bg-green-500/20 text-green-500',
+    1: 'bg-blue-500/20 text-blue-500',
     2: 'bg-red-500/20 text-red-500'
   } as const;
   
@@ -18,7 +18,7 @@ export const STATUS_LABELS = {
   } as const;
   
   export const POT_STATUS_COLORS = {
-    0: 'bg-green-500/20 text-green-500',
+    0: 'bg-blue-500/20 text-blue-500',
     1: 'bg-gray-500/20 text-gray-500'
   } as const;
   

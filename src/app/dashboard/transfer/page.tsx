@@ -477,7 +477,7 @@ export default function TransferPage() {
                 )}
 
                 {success && (
-                  <div className="bg-green-500/10 border border-green-500/50 text-green-700 dark:text-green-300 p-4 rounded-xl">
+                  <div className="bg-blue-500/10 border border-blue-500/50 text-blue-700 dark:text-blue-300 p-4 rounded-xl">
                     <p>{success}</p>
                   </div>
                 )}
@@ -612,7 +612,7 @@ export default function TransferPage() {
                                   title="Copy Transfer ID"
                                 >
                                   {copiedId === transfer.id ? 
-                                    <CheckCircleIcon className="w-4 h-4 text-green-500" /> : 
+                                    <CheckCircleIcon className="w-4 h-4 text-blue-500" /> : 
                                     <DocumentDuplicateIcon className="w-4 h-4" />
                                   }
                                 </button>
@@ -681,7 +681,7 @@ export default function TransferPage() {
                 )}
                 
                 {claimSuccess && (
-                  <div className="bg-green-500/10 border border-green-500/50 text-green-700 dark:text-green-300 p-4 rounded-xl">
+                  <div className="bg-blue-500/10 border border-blue-500/50 text-blue-700 dark:text-blue-300 p-4 rounded-xl">
                     <p>{claimSuccess}</p>
                   </div>
                 )}

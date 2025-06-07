@@ -15,7 +15,7 @@ export default function RedirectComponent() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="text-center">
-        <ArrowPathIcon className="w-10 h-10 text-green-400 animate-spin mx-auto mb-4" />
+        <ArrowPathIcon className="w-10 h-10 text-blue-400 animate-spin mx-auto mb-4" />
         <h1 className="text-xl font-medium mb-2">Redirecting...</h1>
         <p className="text-gray-400">Taking you to the new dashboard</p>
       </div>

@@ -67,7 +67,7 @@ export default function DashboardLayout({
   return (
     <div className={`${inter.className} flex flex-col min-h-screen`}>
       {/* Background Elements - Light mode and dark mode backgrounds */}
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:via-black dark:to-green-950" />
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:via-black dark:to-blue-950" />
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none opacity-5 dark:opacity-20" />
       
       {/* Content */}

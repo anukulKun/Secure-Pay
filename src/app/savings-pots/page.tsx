@@ -193,7 +193,7 @@ export default function SavingsPotsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-green-950">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-900 via-black to-blue-950">
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
       
       <motion.div 
@@ -202,7 +202,7 @@ export default function SavingsPotsPage() {
       >
         {/* Hero Section */}
         <motion.div variants={itemAnimation} className="text-center mb-16 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           <motion.div
             animate={{ 
               boxShadow: [
@@ -212,13 +212,13 @@ export default function SavingsPotsPage() {
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="inline-block mb-6 bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-green-500/10"
+            className="inline-block mb-6 bg-black/30 p-6 rounded-2xl backdrop-blur-xl border border-blue-500/10"
           >
-            <CurrencyDollarIcon className="w-16 h-16 mx-auto text-green-400" />
+            <CurrencyDollarIcon className="w-16 h-16 mx-auto text-blue-400" />
           </motion.div>
           
           <h1 className="text-6xl font-bold mb-6 relative">
-            <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-green-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-blue-400 via-emerald-300 to-blue-500 text-transparent bg-clip-text">
               Savings Pots
             </span>
             <motion.span
@@ -238,18 +238,18 @@ export default function SavingsPotsPage() {
             <motion.div
               variants={itemAnimation}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="flex items-center space-x-3 px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-xl border border-green-500/10"
+              className="flex items-center space-x-3 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-emerald-500/10 backdrop-blur-xl border border-blue-500/10"
             >
-              <ChartBarIcon className="w-5 h-5 text-green-400" />
-              <span className="text-green-400 font-medium">Track Progress</span>
+              <ChartBarIcon className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Track Progress</span>
             </motion.div>
             <motion.div
               variants={itemAnimation}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="flex items-center space-x-3 px-6 py-3 rounded-xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-xl border border-green-500/10"
+              className="flex items-center space-x-3 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-emerald-500/10 backdrop-blur-xl border border-blue-500/10"
             >
-              <LockClosedIcon className="w-5 h-5 text-green-400" />
-              <span className="text-green-400 font-medium">Secure Storage</span>
+              <LockClosedIcon className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">Secure Storage</span>
             </motion.div>
           </div>
         </motion.div>
@@ -283,28 +283,28 @@ export default function SavingsPotsPage() {
               className="max-w-xl mx-auto"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl blur-xl" />
-                <div className="relative bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-green-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-3xl blur-xl" />
+                <div className="relative bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-blue-500/20">
                   <form onSubmit={handleCreatePot} className="space-y-6">
                     <div>
-                      <label className="block mb-2 text-green-400 font-medium">Pot Name</label>
+                      <label className="block mb-2 text-blue-400 font-medium">Pot Name</label>
                       <input
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all duration-200"
                         placeholder="Summer Vacation"
                         required
                       />
                     </div>
 
                     <div>
-                      <label className="block mb-2 text-green-400 font-medium">Target Amount ({currentChain.symbol})</label>
+                      <label className="block mb-2 text-blue-400 font-medium">Target Amount ({currentChain.symbol})</label>
                       <input
                         type="number"
                         value={targetAmount}
                         onChange={(e) => setTargetAmount(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all duration-200"
                         placeholder="0.0"
                         step="0.000000000000000001"
                         required
@@ -312,11 +312,11 @@ export default function SavingsPotsPage() {
                     </div>
 
                     <div>
-                      <label className="block mb-2 text-green-400 font-medium">Remarks</label>
+                      <label className="block mb-2 text-blue-400 font-medium">Remarks</label>
                       <textarea
                         value={remarks}
                         onChange={(e) => setRemarks(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all duration-200"
                         placeholder="What are you saving for?"
                         rows={3}
                         required
@@ -335,7 +335,7 @@ export default function SavingsPotsPage() {
 
                     {success && (
                       <motion.div 
-                        className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400"
+                        className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                       >
@@ -345,7 +345,7 @@ export default function SavingsPotsPage() {
 
                     <motion.button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
+                      className="w-full bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
                       disabled={isLoading || !signer}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -385,7 +385,7 @@ export default function SavingsPotsPage() {
                 <LoadingSpinner />
               ) : savingsPots.length === 0 ? (
                 <motion.div 
-                  className="text-center bg-black/40 backdrop-blur-xl p-12 rounded-2xl border border-green-500/20"
+                  className="text-center bg-black/40 backdrop-blur-xl p-12 rounded-2xl border border-blue-500/20"
                   variants={itemAnimation}
                 >
                   <CurrencyDollarIcon className="w-16 h-16 mx-auto text-gray-600 mb-4" />
@@ -420,8 +420,8 @@ const TabButton: React.FC<TabButtonProps> = ({ isActive, onClick, icon, text, co
       relative px-6 py-3 rounded-xl font-medium
       transition-all duration-300 ease-out
       ${isActive 
-        ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-black shadow-lg shadow-green-500/25' 
-        : 'bg-black/40 backdrop-blur-xl border border-green-500/20 text-white hover:border-green-500/40'
+        ? 'bg-gradient-to-r from-blue-500 to-emerald-500 text-black shadow-lg shadow-blue-500/25' 
+        : 'bg-black/40 backdrop-blur-xl border border-blue-500/20 text-white hover:border-blue-500/40'
       }
     `}
     whileHover={{ scale: 1.05, y: -2 }}
@@ -434,7 +434,7 @@ const TabButton: React.FC<TabButtonProps> = ({ isActive, onClick, icon, text, co
         <motion.span 
           className={`
             px-2 py-0.5 rounded-full text-xs
-            ${isActive ? 'bg-black/20' : 'bg-green-500/20'}
+            ${isActive ? 'bg-black/20' : 'bg-blue-500/20'}
           `}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -446,7 +446,7 @@ const TabButton: React.FC<TabButtonProps> = ({ isActive, onClick, icon, text, co
     </div>
     {isActive && (
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl blur-xl -z-10"
+        className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl blur-xl -z-10"
         layoutId="activeTab"
         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
       />
@@ -465,12 +465,12 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
       variants={itemAnimation}
       className="relative group"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-emerald-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
-      <div className="relative bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-green-500/20 group-hover:border-green-500/40 transition-all duration-300">
+      <div className="relative bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
         <div className="flex justify-between items-start mb-6">
           <div>
-            <h3 className="text-xl font-semibold text-green-400 mb-1">{pot.name}</h3>
+            <h3 className="text-xl font-semibold text-blue-400 mb-1">{pot.name}</h3>
             <p className="text-gray-400 text-sm flex items-center space-x-2">
               <span>By {truncateAddress(pot.owner)}</span>
               <span className="inline-block w-1 h-1 rounded-full bg-gray-500" />
@@ -487,7 +487,7 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
         <div className="mb-6">
           <div className="h-3 bg-black/50 rounded-full overflow-hidden">
             <motion.div 
-              className="h-full bg-gradient-to-r from-green-500 to-emerald-500"
+              className="h-full bg-gradient-to-r from-blue-500 to-emerald-500"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -495,14 +495,14 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
           </div>
           <div className="flex justify-between mt-2 text-sm">
             <span className="text-gray-400">{Math.round(progress)}% saved</span>
-            <span className="text-green-400 font-medium">
+            <span className="text-blue-400 font-medium">
               {formatAmount(pot.currentAmount)} / {formatAmount(pot.targetAmount)} {currentChain.symbol}
             </span>
           </div>
         </div>
 
         {pot.remarks && (
-          <div className="mb-6 p-4 rounded-xl bg-green-500/5 border border-green-500/10">
+          <div className="mb-6 p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
             <p className="text-gray-400 text-sm">{pot.remarks}</p>
           </div>
         )}
@@ -520,7 +520,7 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
                   type="number"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-green-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500/40 transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-xl bg-black/50 border border-blue-500/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40 transition-all duration-200"
                   placeholder={`Amount in ${currentChain.symbol}`}
                   step="0.000000000000000001"
                 />
@@ -531,7 +531,7 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
                       setShowContribute(false);
                       setAmount('');
                     }}
-                    className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
+                    className="flex-1 bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 disabled:opacity-50 disabled:hover:brightness-100 transition-all duration-200"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     disabled={isLoading}
@@ -566,7 +566,7 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
               <div className="flex space-x-3">
                 <motion.button
                   onClick={() => setShowContribute(true)}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 transition-all duration-200"
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-emerald-500 text-black px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:brightness-110 transition-all duration-200"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -610,7 +610,7 @@ const PotCard: React.FC<PotCardProps> = ({ pot, onContribute, onBreak, isLoading
               delay: 0.5
             }}
           >
-            <div className="bg-green-500 text-black p-2 rounded-full shadow-lg shadow-green-500/25">
+            <div className="bg-blue-500 text-black p-2 rounded-full shadow-lg shadow-blue-500/25">
               <CheckCircleIcon className="w-5 h-5" />
             </div>
           </motion.div>

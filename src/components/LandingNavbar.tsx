@@ -62,7 +62,7 @@ const LandingNavbar: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="relative group">
             <motion.div
-              className="absolute -inset-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg blur-lg group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+              className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-lg blur-lg group-hover:opacity-100 opacity-0 transition-opacity duration-300"
               animate={{
                 scale: [1, 1.1, 1],
                 opacity: [0, 0.5, 0],
@@ -74,7 +74,7 @@ const LandingNavbar: React.FC = () => {
               }}
             />
             <motion.span
-              className="relative text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text"
+              className="relative text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-500 text-transparent bg-clip-text"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -87,7 +87,7 @@ const LandingNavbar: React.FC = () => {
             {/* Theme Toggle */}
             <motion.button
               onClick={toggleDarkMode}
-              className="relative p-2 rounded-full bg-black/20 backdrop-blur-sm border border-green-500/20"
+              className="relative p-2 rounded-full bg-black/20 backdrop-blur-sm border border-blue-500/20"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle dark mode"
@@ -106,7 +106,7 @@ const LandingNavbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 transition-all duration-300 group-hover:opacity-100 opacity-90" />
               <span className="relative text-black font-medium">
                 Launch App
               </span>
